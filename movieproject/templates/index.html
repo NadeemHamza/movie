@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container-fluid" style="margin-top:15px;">
+    <!--    <h2>Movies</h2>-->
+    <div style="display:flex;">
+        {% for i in movie_list %}
+        <div class="col-2" style="margin-right:15px;">
+            <a href="{% url 'movieapp:detail' i.id %}" style="text-decoration: none;">
+                <div class="movie_thumb">
+                    <img src="{{i.img.url}}" width="100%">
+                    <div class="movie_name">
+                        <p style="font-weight:500; color:black;">{{i.name}}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    <a class="btn btn-warning" style="font-weight:600;" href="{% url 'movieapp:add_movie' %}">Add Movie</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container-fluid" style="margin-top:15px;">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            {{form.as_p}}
+        </div>
+        <input class="btn btn-warning" style="font-weight:600;" type="submit">
+    </form>
+</div>
+
+{% endblock %}

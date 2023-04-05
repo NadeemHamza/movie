@@ -1,0 +1,23 @@
+body{
+font-family: "Trirong", serif;
+}
+
+a {
+  font:
+}
+
+div.movie_thumb {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+}
+
+div.movie_thumb:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+div.movie_name {
+  text-align: center;
+  padding: 10px 10px;
+}
